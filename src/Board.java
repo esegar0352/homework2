@@ -29,19 +29,30 @@ public class Board {
                 break;
 
             }
-            System.out.println("Фигура добавлена");
         }
+        System.out.println("Фигура добавлена");
     }
 
-   public void getPerimetr() {
-        double p =0;
-       for (int i = 0; i < parts.length; i++) {
-           if (parts[i] != null) {
-               p = p + parts[i].getArea();
+    public void getArea() {
+        double s = 0;
+        for (int i = 0; i < parts.length; i++) {
+            if (parts[i] != null) {
+                s = s + parts[i].getArea();
+            }
+        }
+        System.out.println("Общая площадь всех фигур на доске " + s);
+    }
 
-           }
-           System.out.println("Общая площадь всех фигур на доске" + p);
-       }
-   }
+    public void deleteShape (Shape shape) {
+        for (int i = 0; i <parts.length ; i++) {
+            if (parts[i] != null) {
+                if (parts [i].equals(shape)) {
+                    parts[i] = null;
+                    System.out.println("Фигура удалена!");
+                }
+            }
+        }
+
+    }
 }
 

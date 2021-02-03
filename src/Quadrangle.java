@@ -55,7 +55,7 @@ public class Quadrangle extends Shape {
     }
 
     @Override
-    public double getArea () {
+    public double getPerimetr () {
         return Point.distnceCallculation(a,b) +
                 Point.distnceCallculation(b,c) +
                 Point.distnceCallculation(c,d) +
@@ -63,7 +63,7 @@ public class Quadrangle extends Shape {
     }
 
     @Override
-    public double getPerimetr() {
+    public double getArea() {
         double v = Point.distnceCallculation(a, b) * Point.distnceCallculation (b, c);
         return v;
     }
